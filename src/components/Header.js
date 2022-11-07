@@ -1,26 +1,15 @@
 import Button from './Button'
 
-const Header = ({title}) => 
+const Header = ({title, onAdd}) => 
 {
-    const onClick = () => 
-    {
-        console.log("clicked!");
-    }
-
     return(
         <header className="header">
             <h1>{title}</h1>
-            <Button color="green" text="Add" onClick={onClick}/>
+            <Button color="green" text="Add" onClick={onAdd}/>
         </header>
     )
 }
 
 Header.defaultProps =  { title : "Task Tracker" }
-
-// const headingStyle = 
-// {
-//     color : '#FFF',
-//     background: '#333'
-// }
 
 export default Header
